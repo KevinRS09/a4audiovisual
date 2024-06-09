@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artes Audiovisuales Avanzadas</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="title-logo-container">
+            <img src="./img/logo.png" alt="Logo" class="logo-image">
+            <div class="logo">Artes Audiovisuales Avanzadas</div>
+        </div>
+        <nav>
+            <button class="menu-toggle" aria-label="Open menu">☰</button>
+            <ul>
+                <li><a href="./es/">Inicio</a></li>
+                <li><a href="./es/Servicios/">Servicios</a></li>
+                <li><a href="./es/Portafolio/">Portafolio</a></li>
+                <li><a href="./es/Sobre_mi/">Sobre mi</a></li>
+                <li><a href="./es/Contacto/">Contacto</a></li>
+                <button class="close-menu" aria-label="Close menu">✖</button>
+            </ul>
+        </nav>
+        <div class="language-selector">
+            <img src="./img/es.png" alt="Idioma Español" id="language-button">
+            <div class="dropdown">
+                <a href="./en/"><img src="./img/en.png" alt="English" id="en-button" class="dropdown-item"></a>
+                <a href="./es/"><img src="./img/es.png" alt="Español" id="es-button" class="dropdown-item"></a>
+                <a href="./fr/"><img src="./img/fr.png" alt="Français" id="fr-button" class="dropdown-item"></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <video autoplay muted loop class="background-video">
+                <source src="./video/Backgraund.mp4" type="video/mp4">
+            </video>
+            <div class="overlay"></div>
+            <div class="hero-content">
+                <h1>Edición de Video Profesional</h1>
+                <h2>Trabajos de posproducción</h2>
+                <p>Transformamos tus ideas en realidad visual</p>
+                <a href="#contacto" class="cta-button" id="open-modal">Solicita una Cotización</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Academia de Artes Audiovisuales Avanzadas. Todos los derechos reservados.</p>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+        </div>
+    </footer>
+
+    <!-- Modal for form -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Solicita una Cotización</h2>
+            <?php
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    $nombre = $_POST['name'];
+                    $correo = $_POST['email'];
+                    $descripcion = $_POST['description'];
+
+                    $destinatario = "tu_correo@ejemplo.com";
+                    $asunto = "Nuevo mensaje de formulario";
+                    $cuerpo = "Nombre de contacto: $nombre\nCorreo de contacto: $correo\nDescripción del proyecto: $descripcion";
+
+                    mail($destinatario, $asunto, $cuerpo);
+                }
+            ?>
+            <form id="contact-form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                <label for="name">Nombre de contacto:</label>
+                <input type="text" id="name" name="name">
+                
+                <label for="email">Correo de contacto:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="description">Descripción del proyecto:</label>
+                <textarea id="description" name="description" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="confirmation-message" class="confirmation-message">
+                Nos pondremos en contacto en cuanto podamos.
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/scripts.js"></script>
+</body>
+</html>
