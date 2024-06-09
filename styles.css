@@ -1,0 +1,258 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.title-logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.logo-image {
+    width: 50px;
+    height: 50px;
+}
+
+nav {
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.menu-toggle, .close-menu {
+    display: none;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.language-selector {
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* padding: 0 20px; Added padding to move away from the edge */
+}
+
+.language-selector img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-right: 6px;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 1px solid white;
+    border-radius: 5px;
+    z-index: 10;
+    flex-direction: column;
+}
+
+.dropdown.show {
+    display: flex;
+}
+
+.dropdown img {
+    margin: 5px;
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    /*background: url('./fondoAn.mp4') no-repeat center center/cover;*/
+    border-radius: 8%;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra todo el contenedor */
+    z-index: -1; /* Coloca el video detrás de otro contenido */
+    opacity: 0.9; /* Ajusta este valor para cambiar la opacidad del video */
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 1.2em;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+footer p {
+    margin: 0;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block;
+        order: 1;
+    }
+
+    .title-logo-container {
+        order: 2;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .language-selector {
+        order: 3;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        padding: 10px 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .close-menu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .cta-button {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    .hero-content {
+        padding: 0 10px;
+    }
+}

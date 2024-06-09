@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A4 Academy of Advanced Audiovisual Arts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="title-logo-container">
+            <img src="./logo.png" alt="Logo" class="logo-image">
+            <div class="logo" data-en="Academy of Advanced Audiovisual Arts A4" data-es="Academia de Artes Audiovisuales Avanzadas A4" data-fr="Académie des arts audiovisuels avancés A4">Academy of Advanced Audiovisual Arts A4</div>
+        </div>
+        <nav>
+            <button class="menu-toggle" aria-label="Open menu">☰</button>
+            <ul>
+                <li><a href="./index.html" data-en="Home" data-es="Inicio" data-fr="Accueil">Home</a></li>
+                <li><a href="#servicios" data-en="Services" data-es="Servicios" data-fr="Services">Services</a></li>
+                <li><a href="#portafolio" data-en="Portfolio" data-es="Portafolio" data-fr="Portefeuille">Portfolio</a></li>
+                <li><a href="#nosotros" data-en="About Us" data-es="Sobre mi" data-fr="À propos de moi">About Me</a></li>
+                <li><a href="#contacto" data-en="Contact" data-es="Contacto" data-fr="Contact">Contact</a></li>
+                <button class="close-menu" aria-label="Close menu">✖</button>
+            </ul>
+        </nav>
+        <div class="language-selector">
+            <img src="./en.png" alt="Language Selector" id="language-button">
+            <div class="dropdown">
+                <img src="./en.png" alt="English" id="en-button" class="dropdown-item">
+                <img src="./es.png" alt="Español" id="es-button" class="dropdown-item">
+                <img src="./fr.png" alt="Français" id="fr-button" class="dropdown-item">
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <video autoplay muted loop class="background-video">
+                <source src="fondoAn.mp4" type="video/mp4">
+            </video>
+            <div class="overlay"></div>
+            <div class="hero-content">
+                <h1 data-en="Professional Video Editing" data-es="Edición de Video Profesional" data-fr="Montage Vidéo Professionnel">Professional Video Editing</h1>
+                <p data-en="We transform your ideas into visual reality" data-es="Transformamos tus ideas en realidad visual" data-fr="Nous transformons vos idées en réalité visuelle">We transform your ideas into visual reality</p>
+                <a href="#contacto" class="cta-button" data-en="Request a Quote" data-es="Solicita una Cotización" data-fr="Demandez un devis">Request a Quote</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p data-en="&copy; 2024 A4 Audiovisual Arts. All rights reserved." data-es="&copy; 2024 Artes Audiovisuales A4. Todos los derechos reservados." data-fr="&copy; 2024 Arts Audiovisuels A4. Tous droits réservés.">&copy; 2024 A4 Audiovisual Arts. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+        </div>
+    </footer>
+    <script src="./scripts.js">
+    </script>
+</body>
+</html>
