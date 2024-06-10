@@ -1,35 +1,74 @@
-<!-- **¿Quién soy?**:
-¡Hola! Soy Nelson Rojas, apasionado por la postproducción audiovisual y la narración visual. Mi objetivo es transformar ideas en imágenes impactantes y cautivadoras. Permíteme compartir un poco más sobre mí:
-
-**Experiencia Profesional**:
-Editor de Video Creativo: He trabajado en proyectos de cine, publicidad y televisión, refinando metraje para crear historias memorables. Mi capacidad para sincronizar imagen y sonido me permite dar vida a la visión del director.
-Especialista en Efectos Visuales (VFX): Me encanta explorar nuevas técnicas y herramientas para añadir ese toque mágico a las producciones. Desde pequeños ajustes hasta composiciones complejas, siempre busco superar los límites.
-Colorista Apasionado: La corrección de color es mi lienzo. A través de paletas cuidadosamente elegidas, puedo evocar emociones y establecer la atmósfera adecuada para cada proyecto.
-
-**Formación Académica**:
-Licenciatura en Comunicación Audiovisual: Mi formación académica me proporcionó una base sólida en teoría cinematográfica y técnicas de producción. Siempre estoy aprendiendo y actualizándome para estar al día con las últimas tendencias.
-
-**Habilidades Clave**:
-Edición de Video (Premiere Pro, Final Cut Pro)
-Efectos Visuales (After Effects, Nuke)
-Corrección de Color (DaVinci Resolve)
-Conocimiento de Sonido (Audition, Pro Tools)
-Creatividad y Pasión por la Narración Visual
-
-**Mis Valores**:
-Compromiso: Me esfuerzo por entregar resultados excepcionales en cada proyecto.
-Colaboración: Creo en el poder del trabajo en equipo y la sinergia creativa.
-Curiosidad: Siempre busco inspiración y oportunidades para crecer. -->
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artes Audiovisuales Avanzadas - Servicios</title>
+    <title>Artes Audiovisuales Avanzadas - Sobre mí</title>
     <link rel="stylesheet" href="../../css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+
+        main{
+            background: url('../../img/fondo_servicio.png') no-repeat center center/cover;
+        }
+
+        .about-me {
+            max-width: 1000px;
+            margin: 0px auto;
+            padding: 20px;
+            background-color: rgb(128, 128, 128, 0.7);
+            border-radius: 1%;
+
+        }
+
+        .about-me h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+
+        .about-me p, .about-me ul {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .about-me ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .about-me img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .photo-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .photo-container img {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        @media (max-width: 768px) {
+            .photo-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .photo-container img {
+                min-width: 0;
+                width: 80%;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -41,9 +80,9 @@ Curiosidad: Siempre busco inspiración y oportunidades para crecer. -->
             <button class="menu-toggle" aria-label="Open menu">☰</button>
             <ul>
                 <li><a href="../../">Inicio</a></li>
-                <li><a href="./">Servicios</a></li>
+                <li><a href="../Servicios/">Servicios</a></li>
                 <li><a href="../Portafolio/">Portafolio</a></li>
-                <li><a href="../Sobre_mi/">Sobre mi</a></li>
+                <li><a href="./">Sobre mí</a></li>
                 <li><a href="../Contacto/">Contacto</a></li>
                 <button class="close-menu" aria-label="Close menu">✖</button>
             </ul>
@@ -51,17 +90,48 @@ Curiosidad: Siempre busco inspiración y oportunidades para crecer. -->
         <div class="language-selector">
             <img src="../../img/es.png" alt="Idioma Español" id="language-button">
             <div class="dropdown">
-                <a href="./"><img src="./img/en.png" alt="English" id="en-button" class="dropdown-item"></a>
-                <a href="./"><img src="./img/es.png" alt="Español" id="es-button" class="dropdown-item"></a>
-                <a href="./"><img src="./img/fr.png" alt="Français" id="fr-button" class="dropdown-item"></a>
+                <a href="./"><img src="../../img/en.png" alt="English" id="en-button" class="dropdown-item"></a>
+                <a href="./"><img src="../../img/es.png" alt="Español" id="es-button" class="dropdown-item"></a>
+                <a href="./"><img src="../../img/fr.png" alt="Français" id="fr-button" class="dropdown-item"></a>
             </div>
         </div>
     </header>
     <main>
-        <section class="services">
-            <h1>En desarrollo</h1>
+        <section class="about-me">
+            <h1>Sobre mí</h1>
+            <p><strong>¿Quién soy?</strong>:</p>
+            <p>¡Hola! Soy Nelson Rojas, apasionado por la postproducción audiovisual y la narración visual. Mi objetivo es transformar ideas en imágenes impactantes y cautivadoras. Permíteme compartir un poco más sobre mí:</p>
 
+            <div class="photo-container">
+                <img src="../../img/mi-cara.jpg" alt="Nelson Rojas">
+                <img src="../../img/mi-creacion.jpg" alt="Creación de Nelson Rojas">
+            </div>
 
+            <p><strong>Experiencia Profesional</strong>:</p>
+            <ul>
+                <li><strong>Editor de Video Creativo:</strong> He trabajado en proyectos de cine, publicidad y televisión, refinando metraje para crear historias memorables. Mi capacidad para sincronizar imagen y sonido me permite dar vida a la visión del director.</li>
+                <li><strong>Especialista en Efectos Visuales (VFX):</strong> Me encanta explorar nuevas técnicas y herramientas para añadir ese toque mágico a las producciones. Desde pequeños ajustes hasta composiciones complejas, siempre busco superar los límites.</li>
+                <li><strong>Colorista Apasionado:</strong> La corrección de color es mi lienzo. A través de paletas cuidadosamente elegidas, puedo evocar emociones y establecer la atmósfera adecuada para cada proyecto.</li>
+            </ul>
+
+            <p><strong>Formación Académica</strong>:</p>
+            <p>Licenciatura en Comunicación Audiovisual: Mi formación académica me proporcionó una base sólida en teoría cinematográfica y técnicas de producción. Siempre estoy aprendiendo y actualizándome para estar al día con las últimas tendencias.</p>
+
+            <p><strong>Habilidades Clave</strong>:</p>
+            <ul>
+                <li>Edición de Video (Premiere Pro, Final Cut Pro)</li>
+                <li>Efectos Visuales (After Effects, Nuke)</li>
+                <li>Corrección de Color (DaVinci Resolve)</li>
+                <li>Conocimiento de Sonido (Audition, Pro Tools)</li>
+                <li>Creatividad y Pasión por la Narración Visual</li>
+            </ul>
+
+            <p><strong>Mis Valores</strong>:</p>
+            <ul>
+                <li>Compromiso: Me esfuerzo por entregar resultados excepcionales en cada proyecto.</li>
+                <li>Colaboración: Creo en el poder del trabajo en equipo y la sinergia creativa.</li>
+                <li>Curiosidad: Siempre busco inspiración y oportunidades para crecer.</li>
+            </ul>
         </section>
     </main>
     <footer>

@@ -55,6 +55,14 @@ header {
     align-items: center;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.8);
+    position: fixed; /* Hace que el encabezado sea fijo */
+    top: 0; /* Asegura que el encabezado esté pegado a la parte superior */
+    width: 100%; /* Hace que el encabezado ocupe todo el ancho */
+    z-index: 100; /* Asegura que el encabezado esté por encima de otros elementos */
+}
+
+main {
+    padding-top: 100px; /* Agrega espacio para compensar el encabezado fijo */
 }
 
 .title-logo-container {

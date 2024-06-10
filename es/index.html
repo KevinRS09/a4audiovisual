@@ -3,95 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artes Audiovisuales Avanzadas</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <title>Artes Audiovisuales Avanzadas - Sobre mí</title>
+    <link rel="stylesheet" href="../../css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f0f0; /* Fondo gris claro */
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .about-me {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff; /* Fondo blanco para el contenido */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-me h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+
+        .about-me p, .about-me ul {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .about-me ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .about-me img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .photo-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .photo-container img {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .about-me {
+                padding: 10px;
+            }
+
+            .photo-container img {
+                width: 80%;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="title-logo-container">
-            <img src="./img/logo.png" alt="Logo" class="logo-image">
+            <img src="../../img/logo.png" alt="Logo" class="logo-image">
             <div class="logo">Artes Audiovisuales Avanzadas</div>
         </div>
         <nav>
             <button class="menu-toggle" aria-label="Open menu">☰</button>
             <ul>
-                <li><a href="./es/">Inicio</a></li>
-                <li><a href="./es/Servicios/">Servicios</a></li>
-                <li><a href="./es/Portafolio/">Portafolio</a></li>
-                <li><a href="./es/Sobre_mi/">Sobre mi</a></li>
-                <li><a href="./es/Contacto/">Contacto</a></li>
+                <li><a href="../../">Inicio</a></li>
+                <li><a href="../Servicios/">Servicios</a></li>
+                <li><a href="../Portafolio/">Portafolio</a></li>
+                <li><a href="./">Sobre mí</a></li>
+                <li><a href="../Contacto/">Contacto</a></li>
                 <button class="close-menu" aria-label="Close menu">✖</button>
             </ul>
         </nav>
         <div class="language-selector">
-            <img src="./img/es.png" alt="Idioma Español" id="language-button">
+            <img src="../../img/es.png" alt="Idioma Español" id="language-button">
             <div class="dropdown">
-                <a href="./en/"><img src="./img/en.png" alt="English" id="en-button" class="dropdown-item"></a>
-                <a href="./es/"><img src="./img/es.png" alt="Español" id="es-button" class="dropdown-item"></a>
-                <a href="./fr/"><img src="./img/fr.png" alt="Français" id="fr-button" class="dropdown-item"></a>
+                <a href="./"><img src="../../img/en.png" alt="English" id="en-button" class="dropdown-item"></a>
+                <a href="./"><img src="../../img/es.png" alt="Español" id="es-button" class="dropdown-item"></a>
+                <a href="./"><img src="../../img/fr.png" alt="Français" id="fr-button" class="dropdown-item"></a>
             </div>
         </div>
     </header>
     <main>
-        <section class="hero">
-            <video autoplay muted loop class="background-video">
-                <source src="./video/Backgraund.mp4" type="video/mp4">
-            </video>
-            <div class="overlay"></div>
-            <div class="hero-content">
-                <h1>Edición de Video Profesional</h1>
-                <h2>Trabajos de posproducción</h2>
-                <p>Transformamos tus ideas en realidad visual</p>
-                <a href="#contacto" class="cta-button" id="open-modal">Solicita una Cotización</a>
+        <section class="about-me">
+            <h1>Sobre mí</h1>
+            <p><strong>¿Quién soy?</strong>:</p>
+            <p>¡Hola! Soy Nelson Rojas, apasionado por la postproducción audiovisual y la narración visual. Mi objetivo es transformar ideas en imágenes impactantes y cautivadoras. Permíteme compartir un poco más sobre mí:</p>
+
+            <div class="photo-container">
+                <img src="../../img/mi-cara.jpg" alt="Nelson Rojas">
+            </div>
+
+            <p><strong>Experiencia Profesional</strong>:</p>
+            <ul>
+                <li><strong>Editor de Video Creativo:</strong> He trabajado en proyectos de cine, publicidad y televisión, refinando metraje para crear historias memorables. Mi capacidad para sincronizar imagen y sonido me permite dar vida a la visión del director.</li>
+                <li><strong>Especialista en Efectos Visuales (VFX):</strong> Me encanta explorar nuevas técnicas y herramientas para añadir ese toque mágico a las producciones. Desde pequeños ajustes hasta composiciones complejas, siempre busco superar los límites.</li>
+                <li><strong>Colorista Apasionado:</strong> La corrección de color es mi lienzo. A través de paletas cuidadosamente elegidas, puedo evocar emociones y establecer la atmósfera adecuada para cada proyecto.</li>
+            </ul>
+
+            <p><strong>Formación Académica</strong>:</p>
+            <p>Licenciatura en Comunicación Audiovisual: Mi formación académica me proporcionó una base sólida en teoría cinematográfica y técnicas de producción. Siempre estoy aprendiendo y actualizándome para estar al día con las últimas tendencias.</p>
+
+            <p><strong>Habilidades Clave</strong>:</p>
+            <ul>
+                <li>Edición de Video (Premiere Pro, Final Cut Pro)</li>
+                <li>Efectos Visuales (After Effects, Nuke)</li>
+                <li>Corrección de Color (DaVinci Resolve)</li>
+                <li>Conocimiento de Sonido (Audition, Pro Tools)</li>
+                <li>Creatividad y Pasión por la Narración Visual</li>
+            </ul>
+
+            <p><strong>Mis Valores</strong>:</p>
+            <ul>
+                <li>Compromiso: Me esfuerzo por entregar resultados excepcionales en cada proyecto.</li>
+                <li>Colaboración: Creo en el poder del trabajo en equipo y la sinergia creativa.</li>
+                <li>Curiosidad: Siempre busco inspiración y oportunidades para crecer.</li>
+            </ul>
+
+            <div class="photo-container">
+                <img src="../../img/mi-creacion.jpg" alt="Creación de Nelson Rojas">
             </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Academia de Artes Audiovisuales Avanzadas. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Artes Audiovisuales Avanzadas. Todos los derechos reservados.</p>
         <div class="social-links">
             <a href="https://facebook.com" target="_blank">Facebook</a>
             <a href="https://instagram.com" target="_blank">Instagram</a>
             <a href="https://twitter.com" target="_blank">Twitter</a>
         </div>
     </footer>
-
-    <!-- Modal for form -->
-    <div id="contact-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Solicita una Cotización</h2>
-            <?php
-                if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    $nombre = $_POST['name'];
-                    $correo = $_POST['email'];
-                    $descripcion = $_POST['description'];
-
-                    $destinatario = "tu_correo@ejemplo.com";
-                    $asunto = "Nuevo mensaje de formulario";
-                    $cuerpo = "Nombre de contacto: $nombre\nCorreo de contacto: $correo\nDescripción del proyecto: $descripcion";
-
-                    mail($destinatario, $asunto, $cuerpo);
-                }
-            ?>
-            <form id="contact-form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-                <label for="name">Nombre de contacto:</label>
-                <input type="text" id="name" name="name">
-                
-                <label for="email">Correo de contacto:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="description">Descripción del proyecto:</label>
-                <textarea id="description" name="description" required></textarea>
-                
-                <button type="submit">Enviar</button>
-            </form>
-            <div id="confirmation-message" class="confirmation-message">
-                Nos pondremos en contacto en cuanto podamos.
-            </div>
-        </div>
-    </div>
-
-    <script src="./js/scripts.js"></script>
+    <script src="../../js/scripts.js"></script>
 </body>
 </html>

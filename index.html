@@ -61,20 +61,12 @@
         <div class="modal-content">
             <span class="close-button">&times;</span>
             <h2>Solicita una Cotización</h2>
-            <?php
-                if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    $nombre = $_POST['name'];
-                    $correo = $_POST['email'];
-                    $descripcion = $_POST['description'];
-
-                    $destinatario = "tu_correo@ejemplo.com";
-                    $asunto = "Nuevo mensaje de formulario";
-                    $cuerpo = "Nombre de contacto: $nombre\nCorreo de contacto: $correo\nDescripción del proyecto: $descripcion";
-
-                    mail($destinatario, $asunto, $cuerpo);
-                }
-            ?>
-            <form id="contact-form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+            <!--<p>Formulario no disponible de momento pero puedes contactarnos en la seccion contactos</p>
+            <ul>
+                <li><a href="./es/Contacto/">Contacto</a></li>
+            </ul>-->
+            
+            <form id="contact-form" action="" method="post">
                 <label for="name">Nombre de contacto:</label>
                 <input type="text" id="name" name="name">
                 
@@ -85,7 +77,7 @@
                 <textarea id="description" name="description" required></textarea>
                 
                 <button type="submit">Enviar</button>
-            </form>
+            </form> 
             <div id="confirmation-message" class="confirmation-message">
                 Nos pondremos en contacto en cuanto podamos.
             </div>
