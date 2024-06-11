@@ -15,13 +15,13 @@
             gap: 20px;
             padding: 20px;
         }
-        
+
         .services {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
         }
-        
+
         .service {
             background-color: rgba(255, 255, 255, 0.1);
             background-color: rgb(0, 0, 0, 0.8);
@@ -37,59 +37,58 @@
             transition: transform 0.5s ease-in-out; /* Añadimos transición al cambio de tamaño */
             cursor: pointer;
         }
-        
+
         .img-cont {
             overflow: hidden;
         }
-        
+
         .service img {
             max-width: 100%;
             height: auto;
             border-radius: 10px;
             margin-bottom: 15px;
         }
-        
+
         .service:hover {
             transform: scale(1.03);
         }
-        
+
         .service h2 {
             font-size: 1.5em;
             margin: 15px 0;
         }
-        
+
         @media (max-width: 1024px) {
             .service {
                 flex: 0 0 calc(50% - 20px); 
             }
         }
-        
+
         @media (max-width: 768px) {
             .service {
                 margin-bottom: 30px;
             }
         }
-        
+
         @media (max-width: 480px) {
             .service img {
                 margin-bottom: 10px;
             }
-        
+
             .service h2 {
                 font-size: 1.3em;
                 margin: 10px 0;
             }
-        
+
             .service p {
                 font-size: 0.9em;
             }
-        
+
             .service {
                 flex: 0 0 calc(100% - 20px);
             }
         }
-        </style>
-        
+    </style>
 </head>
 <body>
     <header>
@@ -99,21 +98,20 @@
         </div>
         <nav>
             <button class="menu-toggle" aria-label="Open menu">☰</button>
-            <ul>
+            <ul class="nav-list">
                 <li><a href="../../">Inicio</a></li>
-                <li><a href="./">Servicios</a></li>
-                <li><a href="../Portafolio/">Portafolio</a></li>
+                <li><a href="../Servicios/">Servicios</a></li>
+                <!-- <li><a href="../Portafolio/">Portafolio</a></li> -->
                 <li><a href="../Sobre_mi/">Sobre mi</a></li>
-                <li><a href="../Contacto/">Contacto</a></li>
-                <button class="close-menu" aria-label="Close menu">✖</button>
+                <li><a href="#" id="open-contact-modal">Contacto</a></li>
             </ul>
         </nav>
         <div class="language-selector">
             <img src="../../img/es.png" alt="Idioma Español" id="language-button">
             <div class="dropdown">
-                <a href="./"><img src="./img/en.png" alt="English" id="en-button" class="dropdown-item"></a>
-                <a href="./"><img src="./img/es.png" alt="Español" id="es-button" class="dropdown-item"></a>
-                <a href="./"><img src="./img/fr.png" alt="Français" id="fr-button" class="dropdown-item"></a>
+                <a href="./"><img src="../../img/en.png" alt="English" id="en-button" class="dropdown-item"></a>
+                <a href="./"><img src="../../img/es.png" alt="Español" id="es-button" class="dropdown-item"></a>
+                <a href="./"><img src="../../img/fr.png" alt="Français" id="fr-button" class="dropdown-item"></a>
             </div>
         </div>
     </header>
@@ -156,8 +154,8 @@
             </div>
             <div class="service">
                 <h2>Control de calidad</h2>
-                <img src="../../img/seccion_img8.png" alt="Entrega en múltiples formatos">
-                <p>¿Necesitas asegurar que tu material audiovisual cumpla con los más altos estándares? Reviso y garantizo que los materiales cumplan con especificaciones técnicas y creativas, verifico formatos, identifico artefactos, reviso consistencia narrativa, corrijo color y audio, y aseguro el cumplimiento de normativas y derechos de autor para un producto óptimo.</p>
+                <img src="../../img/seccion_img8.png" alt="Control de calidad">
+                <p>¿Necesitas asegurar que tu material audiovisual cumpla con los más altos estándares? Reviso y garantizo que los materiales cumplan con especificaciones técnicas y creativas, verifico formatos, identifico artefactos, reviso consistencia narrativa, corrijo color y audio, y aseguro el cumplimiento de normativas y derechos de autor para un producto óptimo.</p>
             </div>
         </section>
     </main>
@@ -169,6 +167,24 @@
             <a href="https://twitter.com" target="_blank">Twitter</a>
         </div>
     </footer>
+    
+    <!-- Modal de contacto -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Contacto</h2>
+            <img src="../../img/mi-creacion2.jpg" alt="Foto de contacto" class="contact-photo">
+            <p>Nombre: Nelson Javier Rojas</p>
+            <p>Teléfono: 8195762064</p>
+            <p>Dirección: Gatineau, Canada</p>
+            <p>Correos:</p>
+            <ul>
+                <li><a href="mailto:nelson4academy@gmail.com">nelson4academy@gmail.com</a></li>
+                <li><a href="mailto:nelson@a4audiovisual.com">nelson@a4audiovisual.com</a></li>
+            </ul>
+        </div>
+    </div>
+
     <script src="../../js/scripts.js"></script>
 </body>
 </html>

@@ -1,53 +1,85 @@
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
-    const navUl = document.querySelector('nav ul');
-    const closeMenuButton = document.querySelector('.close-menu');
-    
+    const navList = document.querySelector('.nav-list');
     const languageButton = document.getElementById('language-button');
+    const dropdownItems = document.querySelectorAll('.dropdown-item');
     const dropdown = document.querySelector('.dropdown');
 
-    menuToggle.addEventListener('click', function() {
-        navUl.classList.toggle('show');
-    });
+    const contactModal = document.getElementById('contact-modal');
+    const quoteModal = document.getElementById('quote-modal');
 
-    closeMenuButton.addEventListener('click', function() {
-        navUl.classList.remove('show');
+    const openContactModalBtn = document.getElementById('open-contact-modal');
+    const openQuoteModalBtn = document.getElementById('open-quote-modal');
+
+    const closeButtons = document.querySelectorAll('.close-button');
+
+    menuToggle.addEventListener('click', function() {
+        navList.classList.toggle('show');
     });
 
     languageButton.addEventListener('click', function() {
         dropdown.classList.toggle('show');
     });
 
-    // Modal functionality
-    const modal = document.getElementById("contact-modal");
-    const openModalButton = document.getElementById("open-modal");
-    const closeModalButton = document.querySelector(".close-button");
-    const contactForm = document.getElementById("contact-form");
-    const confirmationMessage = document.getElementById("confirmation-message");
-
-    openModalButton.addEventListener('click', function() {
-        modal.style.display = "block";
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', function(event) {
+            event.preventDefault();
+            const lang = this.id.split('-')[0];
+            translatePage(lang);
+            dropdown.classList.remove('show');
+        });
     });
 
-    closeModalButton.addEventListener('click', function() {
-        modal.style.display = "none";
+    openContactModalBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        contactModal.style.display = 'block';
+    });
+
+    if (openQuoteModalBtn) {
+        openQuoteModalBtn.addEventListener('click', function(event) {
+            event.preventDefault();
+            quoteModal.style.display = 'block';
+        });
+    }
+
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            contactModal.style.display = 'none';
+            if (quoteModal) {
+                quoteModal.style.display = 'none';
+            }
+        });
     });
 
     window.addEventListener('click', function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+        if (event.target == contactModal) {
+            contactModal.style.display = 'none';
+        }
+        if (event.target == quoteModal) {
+            quoteModal.style.display = 'none';
         }
     });
 
-    contactForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        // Perform form submission logic (e.g., using fetch or AJAX)
-        // Here we'll just simulate successful submission
-        confirmationMessage.style.display = "block";
-        contactForm.reset();
-        setTimeout(function() {
-            confirmationMessage.style.display = "none";
-            modal.style.display = "none";
-        }, 3000);
-    });
+    // Función para traducir la página
+    function translatePage(lang) {
+        const elements = document.querySelectorAll('[data-en], [data-es], [data-fr]');
+        elements.forEach(element => {
+            switch (lang) {
+                case 'en':
+                    element.textContent = element.dataset.en;
+                    break;
+                case 'es':
+                    element.textContent = element.dataset.es;
+                    break;
+                case 'fr':
+                    element.textContent = element.dataset.fr;
+                    break;
+                default:
+                    element.textContent = element.dataset.en; // Por defecto, mostrar en inglés
+            }
+        });
+    }
+
+    // Establecer la página en inglés por defecto al cargar
+    translatePage('en');
 });

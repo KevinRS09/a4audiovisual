@@ -78,13 +78,12 @@
         </div>
         <nav>
             <button class="menu-toggle" aria-label="Open menu">☰</button>
-            <ul>
+            <ul class="nav-list">
                 <li><a href="../../">Inicio</a></li>
                 <li><a href="../Servicios/">Servicios</a></li>
-                <li><a href="../Portafolio/">Portafolio</a></li>
-                <li><a href="./">Sobre mí</a></li>
-                <li><a href="../Contacto/">Contacto</a></li>
-                <button class="close-menu" aria-label="Close menu">✖</button>
+                <!-- <li><a href="../Portafolio/">Portafolio</a></li> -->
+                <li><a href="../Sobre_mi/">Sobre mi</a></li>
+                <li><a href="#" id="open-contact-modal">Contacto</a></li>
             </ul>
         </nav>
         <div class="language-selector">
@@ -142,6 +141,23 @@
             <a href="https://twitter.com" target="_blank">Twitter</a>
         </div>
     </footer>
+
+    <!-- Modal de contacto -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Contacto</h2>
+            <img src="../../img/mi-creacion2.jpg" alt="Foto de contacto" class="contact-photo">
+            <p>Nombre: Nelson Javier Rojas</p>
+            <p>Teléfono: 8195762064</p>
+            <p>Dirección: Gatineau, Canada</p>
+            <p>Correos:</p>
+            <ul>
+                <li><a href="mailto:nelson4academy@gmail.com">nelson4academy@gmail.com</a></li>
+                <li><a href="mailto:nelson@a4audiovisual.com">nelson@a4audiovisual.com</a></li>
+            </ul>
+        </div>
+    </div>
     <script src="../../js/scripts.js"></script>
 </body>
 </html>
