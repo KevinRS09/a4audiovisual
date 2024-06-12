@@ -22,10 +22,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     dropdownItems.forEach(item => {
-        item.addEventListener('click', function(event) {
-            event.preventDefault();
+        item.addEventListener('click', function() {
             const lang = this.id.split('-')[0];
-            translatePage(lang);
+            // Aquí puedes agregar la lógica para cambiar el idioma del contenido
+            languageButton.src = this.src;
             dropdown.classList.remove('show');
         });
     });
@@ -59,27 +59,4 @@ document.addEventListener('DOMContentLoaded', function() {
             quoteModal.style.display = 'none';
         }
     });
-
-    // Función para traducir la página
-    function translatePage(lang) {
-        const elements = document.querySelectorAll('[data-en], [data-es], [data-fr]');
-        elements.forEach(element => {
-            switch (lang) {
-                case 'en':
-                    element.textContent = element.dataset.en;
-                    break;
-                case 'es':
-                    element.textContent = element.dataset.es;
-                    break;
-                case 'fr':
-                    element.textContent = element.dataset.fr;
-                    break;
-                default:
-                    element.textContent = element.dataset.en; // Por defecto, mostrar en inglés
-            }
-        });
-    }
-
-    // Establecer la página en inglés por defecto al cargar
-    translatePage('en');
 });

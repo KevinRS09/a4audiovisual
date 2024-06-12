@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arts Audiovisuels Avancés - Services</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .services {
+            background: url('../../img/fondo_servicio.png') no-repeat center center/cover;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .service {
+            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgb(0, 0, 0, 0.8);
+            padding: 20px;
+            border: 1px solid white;
+            border-radius: 10px;
+            text-align: center;
+            flex: 0 0 calc(25% - 20px); /* Maximum 4 services per row */
+            margin-bottom: 40px;
+            padding: 0 10px;
+            box-sizing: border-box;
+            overflow: hidden;
+            transition: transform 0.5s ease-in-out; /* Adding transition to size change */
+            cursor: pointer;
+        }
+
+        .img-cont {
+            overflow: hidden;
+        }
+
+        .service img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .service:hover {
+            transform: scale(1.03);
+        }
+
+        .service h2 {
+            font-size: 1.5em;
+            margin: 15px 0;
+        }
+
+        @media (max-width: 1024px) {
+            .service {
+                flex: 0 0 calc(50% - 20px); 
+            }
+        }
+
+        @media (max-width: 768px) {
+            .service {
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .service img {
+                margin-bottom: 10px;
+            }
+
+            .service h2 {
+                font-size: 1.3em;
+                margin: 10px 0;
+            }
+
+            .service p {
+                font-size: 0.9em;
+            }
+
+            .service {
+                flex: 0 0 calc(100% - 20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="title-logo-container">
+            <img src="../../img/logo.png" alt="Logo" class="logo-image">
+            <div class="logo">Arts Audiovisuels Avancés</div>
+        </div>
+        <nav>
+            <button class="menu-toggle" aria-label="Open menu">☰</button>
+            <ul class="nav-list">
+                <li><a href="../">Accueil</a></li>
+                <li><a href="../Services/">Services</a></li>
+                <!-- <li><a href="../Portfolio/">Portfolio</a></li> -->
+                <li><a href="../À_propos_de_moi/">À propos de moi</a></li>
+                <li><a href="#" id="open-contact-modal">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="language-selector">
+            <img src="../../img/fr.png" alt="Langue Espagnole" id="language-button">
+            <div class="dropdown">
+                <a href="../../"><img src="../../img/en.png" alt="English" id="en-button" class="dropdown-item"></a>
+                <a href="../../es/"><img src="../../img/es.png" alt="Español" id="es-button" class="dropdown-item"></a>
+                <a href="./"><img src="../../img/fr.png" alt="Français" id="fr-button" class="dropdown-item"></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="services">
+            <div class="service">
+                <h2>Montage vidéo</h2>
+                <img src="../../img/seccion_img1.png" alt="Montage vidéo">
+                <p>Vous avez des séquences que vous devez peaufiner et donner une touche professionnelle ? Je propose des services de montage vidéo pour transformer vos images en histoires captivantes. Des courts métrages aux clips musicaux, je suis ici pour transformer votre vision en réalité.</p>
+            </div>
+            <div class="service">
+                <h2>Correction des couleurs</h2>
+                <img src="../../img/seccion_img2.png" alt="Correction des couleurs">
+                <p>Les couleurs de votre vidéo ne sont pas comme vous l'espériez ? Ne vous inquiétez pas, je peux ajuster les couleurs et la luminosité pour que chaque image ait l'apparence que vous souhaitez. Des améliorations subtiles aux changements spectaculaires, je m'assure que vos images soient visuellement époustouflantes.</p>
+            </div>
+            <div class="service">
+                <h2>Montage et composition</h2>
+                <img src="../../img/seccion_img3.png" alt="Montage et composition">
+                <p>Vous souhaitez ajouter des effets spéciaux ou combiner plusieurs prises en une seule scène ? Grâce à mes compétences en montage et en composition, je peux créer des séquences fluides et surprenantes qui captiveront votre public.</p>
+            </div>
+            <div class="service">
+                <h2>Animation graphique</h2>
+                <img src="../../img/seccion_img4.png" alt="Animation graphique">
+                <p>Vous devez ajouter des graphiques animés ou des logos à vos vidéos ? Avec mon expérience en animation, je peux donner vie à vos idées et faire en sorte que vos projets se démarquent de la foule.</p>
+            </div>
+            <div class="service">
+                <h2>Mixage audio</h2>
+                <img src="../../img/seccion_img5.png" alt="Mixage audio">
+                <p>Le son est aussi important que l'image. Je propose des services de mixage audio pour m'assurer que chaque mot soit clair et que chaque effet ait l'impact souhaité. De la suppression du bruit à la création de paysages sonores immersifs, je suis ici pour que votre audio soit au top.</p>
+            </div>
+            <div class="service">
+                <h2>Sous-titrage et doublage</h2>
+                <img src="../../img/seccion_img6.png" alt="Sous-titrage et doublage">
+                <p>Vous devez atteindre un public international ou rendre votre contenu accessible aux personnes malentendantes ? Je propose des services de sous-titrage et de doublage pour que votre message atteigne tout le monde, quelle que soit la langue ou les barrières auditives.</p>
+            </div>
+            <div class="service">
+                <h2>Formats multiples</h2>
+                <img src="../../img/seccion_img7.png" alt="Livraison en formats multiples">
+                <p>Que votre vidéo soit destinée à un grand écran ou à un appareil mobile, je peux livrer votre projet dans une variété de formats pour garantir une lecture parfaite sur toutes les plateformes.</p>
+            </div>
+            <div class="service">
+                <h2>Contrôle de qualité</h2>
+                <img src="../../img/seccion_img8.png" alt="Contrôle de qualité">
+                <p>Vous devez vous assurer que votre matériel audiovisuel respecte les normes les plus élevées ? Je vérifie et garantis que les matériaux respectent les spécifications techniques et créatives, vérifie les formats, identifie les artefacts, révise la cohérence narrative, corrige la couleur et l'audio, et m'assure du respect des réglementations et des droits d'auteur pour un produit optimal.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Arts Audiovisuels Avancés. Tous droits réservés.</p>
+        <!-- <div class="social-links">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+        </div> -->
+    </footer>
+    
+    <!-- Modal de contact -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Contact</h2>
+            <img src="../../img/mi-creacion2.jpg" alt="Photo de contact" class="contact-photo">
+            <p>Nom: Nelson Javier Rojas</p>
+            <p>Téléphone: 8195762064</p>
+            <p>Adresse: Gatineau, Canada</p>
+            <p>Courriels:</p>
+            <ul>
+                <li><a href="mailto:nelson4academy@gmail.com">nelson4academy@gmail.com</a></li>
+                <li><a href="mailto:nelson@a4audiovisual.com">nelson@a4audiovisual.com</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="../../js/scripts.js"></script>
+</body>
+</html>

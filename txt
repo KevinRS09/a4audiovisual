@@ -4,55 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artes Audiovisuales Avanzadas</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="title-logo-container">
-            <img src="../img/logo.png" alt="Logo" class="logo-image">
+            <img src="./img/logo.png" alt="Logo" class="logo-image">
             <div class="logo">Artes Audiovisuales Avanzadas</div>
         </div>
         <nav>
             <button class="menu-toggle" aria-label="Open menu">☰</button>
             <ul class="nav-list">
                 <li><a href="./">Inicio</a></li>
-                <li><a href="../es/Servicios/">Servicios</a></li>
-                <!-- <li><a href="../es/Portafolio/">Portafolio</a></li> -->
-                <li><a href="../es/Sobre_mi/">Sobre mi</a></li>
+                <li><a href="./es/Servicios/">Servicios</a></li>
+                <li><a href="./es/Portafolio/">Portafolio</a></li>
+                <li><a href="./es/Sobre_mi/">Sobre mi</a></li>
                 <li><a href="#" id="open-contact-modal">Contacto</a></li>
             </ul>
         </nav>
         <div class="language-selector">
-            <img src="../img/es.png" alt="Idioma Español" id="language-button">
+            <img src="./img/es.png" alt="Idioma Español" id="language-button">
             <div class="dropdown">
-                <a href="../"><img src="../img/en.png" alt="English" id="en-button" class="dropdown-item"></a>
-                <a href="./"><img src="../img/es.png" alt="Español" id="es-button" class="dropdown-item"></a>
-                <a href="../fr/"><img src="../img/fr.png" alt="Français" id="fr-button" class="dropdown-item"></a>
+                <a href="./"><img src="./img/en.png" alt="English" id="en-button" class="dropdown-item"></a>
+                <a href="./"><img src="./img/es.png" alt="Español" id="es-button" class="dropdown-item"></a>
+                <a href="./"><img src="./img/fr.png" alt="Français" id="fr-button" class="dropdown-item"></a>
             </div>
         </div>
     </header>
     <main>
         <section class="hero">
             <video autoplay muted loop class="background-video">
-                <source src="../video/Backgraund.mp4" type="video/mp4">
+                <source src="./video/Backgraund.mp4" type="video/mp4">
             </video>
             <div class="overlay"></div>
             <div class="hero-content">
                 <h1>Edición de Video Profesional</h1>
                 <h2>Trabajos de posproducción</h2>
                 <p>Transformamos tus ideas en realidad visual</p>
-                <!-- <a href="#" class="cta-button" id="open-quote-modal">Solicita una Cotización</a> -->
+                <a href="#" class="cta-button" id="open-quote-modal">Solicita una Cotización</a>
             </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Artes Audiovisuales Avanzadas. Todos los derechos reservados.</p>
-        <!-- <div class="social-links">
+        <div class="social-links">
             <a href="https://facebook.com" target="_blank">Facebook</a>
             <a href="https://instagram.com" target="_blank">Instagram</a>
             <a href="https://twitter.com" target="_blank">Twitter</a>
-        </div> -->
+        </div>
     </footer>
 
     <!-- Modal de contacto -->
@@ -60,7 +60,7 @@
         <div class="modal-content">
             <span class="close-button">&times;</span>
             <h2>Contacto</h2>
-            <img src="../img/mi-creacion2.jpg" alt="Foto de contacto" class="contact-photo">
+            <img src="./img/mi-creacion2.jpg" alt="Foto de contacto" class="contact-photo">
             <p>Nombre: Nelson Javier Rojas</p>
             <p>Teléfono: 8195762064</p>
             <p>Dirección: Gatineau, Canada</p>
@@ -95,6 +95,6 @@
         </div>
     </div>
 
-    <script src="../js/scripts.js"></script>
+    <script src="./js/scripts.js"></script>
 </body>
 </html>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artes Audiovisuales Avanzadas</title>
+    <title>Advanced Audiovisual Arts</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -11,24 +11,24 @@
     <header>
         <div class="title-logo-container">
             <img src="./img/logo.png" alt="Logo" class="logo-image">
-            <div class="logo" data-en="Advanced Audiovisual Arts" data-es="Artes Audiovisuales Avanzadas" data-fr="Arts Audiovisuels Avancés">Artes Audiovisuales Avanzadas</div>
+            <div class="logo">Advanced Audiovisual Arts</div>
         </div>
         <nav>
             <button class="menu-toggle" aria-label="Open menu">☰</button>
             <ul class="nav-list">
-                <li><a href="./" data-en="Home" data-es="Inicio" data-fr="Accueil">Inicio</a></li>
-                <li><a href="./es/Servicios/" data-en="Services" data-es="Servicios" data-fr="Services">Servicios</a></li>
-                <li><a href="./es/Portafolio/" data-en="Portfolio" data-es="Portafolio" data-fr="Portfolio">Portafolio</a></li>
-                <li><a href="./es/Sobre_mi/" data-en="About me" data-es="Sobre mi" data-fr="À propos de moi">Sobre mi</a></li>
-                <li><a href="#" id="open-contact-modal" data-en="Contact" data-es="Contacto" data-fr="Contact">Contacto</a></li>
+                <li><a href="./">Home</a></li>
+                <li><a href="./en/Services/">Services</a></li>
+                <!-- <li><a href="./en/Portfolio/">Portfolio</a></li> -->
+                <li><a href="./en/About_me/">About Me</a></li>
+                <li><a href="#" id="open-contact-modal">Contact</a></li>
             </ul>
         </nav>
         <div class="language-selector">
-            <img src="./img/en.png" alt="Idioma Español" id="language-button">
+            <img src="./img/en.png" alt="Spanish Language" id="language-button">
             <div class="dropdown">
                 <a href="./"><img src="./img/en.png" alt="English" id="en-button" class="dropdown-item"></a>
-                <a href="./"><img src="./img/es.png" alt="Español" id="es-button" class="dropdown-item"></a>
-                <a href="./"><img src="./img/fr.png" alt="Français" id="fr-button" class="dropdown-item"></a>
+                <a href="./es/"><img src="./img/es.png" alt="Español" id="es-button" class="dropdown-item"></a>
+                <a href="./fr/"><img src="./img/fr.png" alt="Français" id="fr-button" class="dropdown-item"></a>
             </div>
         </div>
     </header>
@@ -39,32 +39,32 @@
             </video>
             <div class="overlay"></div>
             <div class="hero-content">
-                <h1 data-en="Professional Video Editing" data-es="Edición de Video Profesional" data-fr="Montage vidéo professionnel">Edición de Video Profesional</h1>
-                <h2 data-en="Post-production Work" data-es="Trabajos de posproducción" data-fr="Travaux de postproduction">Trabajos de posproducción</h2>
-                <p data-en="We turn your ideas into visual reality" data-es="Transformamos tus ideas en realidad visual" data-fr="Nous transformons vos idées en réalité visuelle">Transformamos tus ideas en realidad visual</p>
-                <a href="#" class="cta-button" id="open-quote-modal" data-en="Request a Quote" data-es="Solicita una Cotización" data-fr="Demander un devis">Solicita una Cotización</a>
+                <h1>Professional Video Editing</h1>
+                <h2>Post-production Work</h2>
+                <p>We transform your ideas into visual reality</p>
+                <!-- <a href="#" class="cta-button" id="open-quote-modal">Request a Quote</a> -->
             </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Artes Audiovisuales Avanzadas. Todos los derechos reservados.</p>
-        <div class="social-links">
+        <p>&copy; 2024 Advanced Audiovisual Arts. All rights reserved.</p>
+        <!-- <div class="social-links">
             <a href="https://facebook.com" target="_blank">Facebook</a>
             <a href="https://instagram.com" target="_blank">Instagram</a>
             <a href="https://twitter.com" target="_blank">Twitter</a>
-        </div>
+        </div> -->
     </footer>
 
-    <!-- Modal de contacto -->
+    <!-- Contact Modal -->
     <div id="contact-modal" class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
-            <h2>Contacto</h2>
-            <img src="./img/mi-creacion2.jpg" alt="Foto de contacto" class="contact-photo">
-            <p data-en="Name: Nelson Javier Rojas" data-es="Nombre: Nelson Javier Rojas" data-fr="Nom: Nelson Javier Rojas">Nombre: Nelson Javier Rojas</p>
-            <p data-en="Phone: 8195762064" data-es="Teléfono: 8195762064" data-fr="Téléphone: 8195762064">Teléfono: 8195762064</p>
-            <p data-en="Address: Gatineau, Canada" data-es="Dirección: Gatineau, Canada" data-fr="Adresse: Gatineau, Canada">Dirección: Gatineau, Canada</p>
-            <p data-en="Emails:" data-es="Correos:" data-fr="E-mails:">Correos:</p>
+            <h2>Contact</h2>
+            <img src="./img/mi-creacion2.jpg" alt="Contact Photo" class="contact-photo">
+            <p>Name: Nelson Javier Rojas</p>
+            <p>Phone: 8195762064</p>
+            <p>Address: Gatineau, Canada</p>
+            <p>Emails:</p>
             <ul>
                 <li><a href="mailto:nelson4academy@gmail.com">nelson4academy@gmail.com</a></li>
                 <li><a href="mailto:nelson@a4audiovisual.com">nelson@a4audiovisual.com</a></li>
@@ -72,28 +72,29 @@
         </div>
     </div>
 
-    <!-- Modal para formulario de cotización -->
+    <!-- Quote Request Modal -->
     <div id="quote-modal" class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
-            <h2>Solicita una Cotización</h2>
+            <h2>Request a Quote</h2>
             <form id="contact-form" action="" method="post">
-                <label for="name" data-en="Contact Name:" data-es="Nombre de contacto:" data-fr="Nom du contact:">Nombre de contacto:</label>
+                <label for="name">Contact Name:</label>
                 <input type="text" id="name" name="name">
                 
-                <label for="email" data-en="Contact Email:" data-es="Correo de contacto:" data-fr="Email de contact:">Correo de contacto:</label>
+                <label for="email">Contact Email:</label>
                 <input type="email" id="email" name="email" required>
                 
-                <label for="description" data-en="Project Description:" data-es="Descripción del proyecto:" data-fr="Description du projet:">Descripción del proyecto:</label>
+                <label for="description">Project Description:</label>
                 <textarea id="description" name="description" required></textarea>
                 
-                <button type="submit" data-en="Submit" data-es="Enviar" data-fr="Soumettre">Enviar</button>
+                <button type="submit">Send</button>
             </form> 
-            <div>
-                <div id="confirmation-message" class="confirmation-message" data-en="We'll get in touch as soon as we can." data-es="Nos pondremos en contacto en cuanto podamos." data-fr="Nous vous contacterons dès que possible.">Nos pondremos en contacto en cuanto podamos.</div>
+            <div id="confirmation-message" class="confirmation-message">
+                We will get back to you as soon as possible.
             </div>
         </div>
-    
-        <script src="./js/scripts.js"></script>
-    </body>
-    </html>
+    </div>
+
+    <script src="./js/scripts.js"></script>
+</body>
+</html>

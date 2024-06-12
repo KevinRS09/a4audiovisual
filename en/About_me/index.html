@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Audiovisual Arts - About Me</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        main{
+            background: url('../../img/fondo_servicio.png') no-repeat center center/cover;
+        }
+
+        .about-me {
+            max-width: 1000px;
+            margin: 0px auto;
+            padding: 20px;
+            background-color: rgb(128, 128, 128, 0.7);
+            border-radius: 1%;
+        }
+
+        .about-me h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+
+        .about-me p, .about-me ul {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .about-me ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .about-me img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .photo-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .photo-container img {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        @media (max-width: 768px) {
+            .photo-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .photo-container img {
+                min-width: 0;
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="title-logo-container">
+            <img src="../../img/logo.png" alt="Logo" class="logo-image">
+            <div class="logo">Advanced Audiovisual Arts</div>
+        </div>
+        <nav>
+            <button class="menu-toggle" aria-label="Open menu">☰</button>
+            <ul class="nav-list">
+                <li><a href="../../">Home</a></li>
+                <li><a href="../Services/">Services</a></li>
+                <!-- <li><a href="../Portfolio/">Portfolio</a></li> -->
+                <li><a href="../About_me/">About Me</a></li>
+                <li><a href="#" id="open-contact-modal">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="language-selector">
+            <img src="../../img/en.png" alt="Spanish Language" id="language-button">
+            <div class="dropdown">
+                <a href="./"><img src="../../img/en.png" alt="English" id="en-button" class="dropdown-item"></a>
+                <a href="../../es/"><img src="../../img/es.png" alt="Spanish" id="es-button" class="dropdown-item"></a>
+                <a href="../../fr/"><img src="../../img/fr.png" alt="French" id="fr-button" class="dropdown-item"></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="about-me">
+            <h1>About Me</h1>
+            <p><strong>Who Am I?</strong>:</p>
+            <p>Hello! I'm Nelson Rojas, passionate about audiovisual post-production and visual storytelling. My goal is to transform ideas into impactful and captivating images. Let me share a bit more about myself:</p>
+
+            <div class="photo-container">
+                <img src="../../img/mi-cara.jpg" alt="Nelson Rojas">
+                <img src="../../img/mi-creacion.jpg" alt="Nelson Rojas Creation">
+            </div>
+
+            <p><strong>Professional Experience</strong>:</p>
+            <ul>
+                <li><strong>Creative Video Editor:</strong> I have worked on film, advertising, and television projects, refining footage to create memorable stories. My ability to synchronize image and sound allows me to bring the director's vision to life.</li>
+                <li><strong>Visual Effects (VFX) Specialist:</strong> I love exploring new techniques and tools to add that magical touch to productions. From small tweaks to complex compositions, I always strive to push the boundaries.</li>
+                <li><strong>Passionate Colorist:</strong> Color correction is my canvas. Through carefully chosen palettes, I can evoke emotions and set the right atmosphere for each project.</li>
+            </ul>
+
+            <p><strong>Academic Background</strong>:</p>
+            <p>Bachelor's Degree in Audiovisual Communication: My academic training provided me with a solid foundation in film theory and production techniques. I am always learning and updating myself to keep up with the latest trends.</p>
+
+            <p><strong>Key Skills</strong>:</p>
+            <ul>
+                <li>Video Editing (Premiere Pro, Final Cut Pro)</li>
+                <li>Visual Effects (After Effects, Nuke)</li>
+                <li>Color Correction (DaVinci Resolve)</li>
+                <li>Sound Knowledge (Audition, Pro Tools)</li>
+                <li>Creativity and Passion for Visual Storytelling</li>
+            </ul>
+
+            <p><strong>My Values</strong>:</p>
+            <ul>
+                <li>Commitment: I strive to deliver exceptional results on every project.</li>
+                <li>Collaboration: I believe in the power of teamwork and creative synergy.</li>
+                <li>Curiosity: I am always seeking inspiration and opportunities to grow.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Advanced Audiovisual Arts. All rights reserved.</p>
+        <!-- <div class="social-links">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+        </div> -->
+    </footer>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Contact</h2>
+            <img src="../../img/mi-creacion2.jpg" alt="Contact Photo" class="contact-photo">
+            <p>Name: Nelson Javier Rojas</p>
+            <p>Phone: 8195762064</p>
+            <p>Address: Gatineau, Canada</p>
+            <p>Emails:</p>
+            <ul>
+                <li><a href="mailto:nelson4academy@gmail.com">nelson4academy@gmail.com</a></li>
+                <li><a href="mailto:nelson@a4audiovisual.com">nelson@a4audiovisual.com</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="../../js/scripts.js"></script>
+</body>
+</html>
